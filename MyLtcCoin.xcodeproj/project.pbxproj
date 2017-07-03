@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		203169241F03978300605D43 /* YKLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203169191F03978300605D43 /* YKLineChartView.m */; };
+		203169251F03978300605D43 /* YKLineChartViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031691B1F03978300605D43 /* YKLineChartViewBase.m */; };
+		203169261F03978300605D43 /* YKLineDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031691D1F03978300605D43 /* YKLineDataSet.m */; };
+		203169271F03978300605D43 /* YKLineEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031691F1F03978300605D43 /* YKLineEntity.m */; };
+		203169281F03978300605D43 /* YKTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203169211F03978300605D43 /* YKTimeLineView.m */; };
+		203169291F03978300605D43 /* YKViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 203169231F03978300605D43 /* YKViewBase.m */; };
+		2031692D1F03A23C00605D43 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031692C1F03A23C00605D43 /* FTPopOverMenu.m */; };
+		206BC87E1F01068100574DF8 /* baseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC87D1F01068100574DF8 /* baseViewController.m */; };
+		206BC8811F01069500574DF8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8801F01069500574DF8 /* HomeViewController.m */; };
+		206BC8841F0106AA00574DF8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8831F0106AA00574DF8 /* NewsViewController.m */; };
+		206BC8871F0106C400574DF8 /* CoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8861F0106C400574DF8 /* CoinViewController.m */; };
+		206BC88A1F0106D300574DF8 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8891F0106D300574DF8 /* MeViewController.m */; };
+		206BC8911F02045E00574DF8 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8901F02045E00574DF8 /* NetWorkTools.m */; };
+		206BC8951F02275500574DF8 /* buysaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8941F02275500574DF8 /* buysaleModel.m */; };
+		206BC8981F022CC100574DF8 /* buysaleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8971F022CC100574DF8 /* buysaleTableViewCell.m */; };
+		206BC89C1F02498700574DF8 /* dealdoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC89B1F02498700574DF8 /* dealdoneTableViewCell.m */; };
+		206BC89F1F024CFD00574DF8 /* dealDoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC89E1F024CFD00574DF8 /* dealDoneModel.m */; };
+		207FC4781F00FC96000123A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FC4771F00FC96000123A6 /* main.m */; };
+		207FC47B1F00FC96000123A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FC47A1F00FC96000123A6 /* AppDelegate.m */; };
+		207FC47E1F00FC96000123A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FC47D1F00FC96000123A6 /* ViewController.m */; };
+		207FC4811F00FC96000123A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207FC47F1F00FC96000123A6 /* Main.storyboard */; };
+		207FC4831F00FC97000123A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207FC4821F00FC97000123A6 /* Assets.xcassets */; };
+		207FC4861F00FC97000123A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207FC4841F00FC97000123A6 /* LaunchScreen.storyboard */; };
+		207FC4911F00FC97000123A6 /* MyLtcCoinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FC4901F00FC97000123A6 /* MyLtcCoinTests.m */; };
+		207FC49C1F00FC97000123A6 /* MyLtcCoinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FC49B1F00FC97000123A6 /* MyLtcCoinUITests.m */; };
+		7D3B34AF0F633CD4516CC2E6 /* libPods-MyLtcCoin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A54AE111BDF51B266D5F336 /* libPods-MyLtcCoin.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		207FC48D1F00FC97000123A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207FC46B1F00FC96000123A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207FC4721F00FC96000123A6;
+			remoteInfo = MyLtcCoin;
+		};
+		207FC4981F00FC97000123A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207FC46B1F00FC96000123A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207FC4721F00FC96000123A6;
+			remoteInfo = MyLtcCoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C9F2367CFA54F5A38562DDC /* Pods-MyLtcCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLtcCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLtcCoin/Pods-MyLtcCoin.release.xcconfig"; sourceTree = "<group>"; };
+		203169171F03978300605D43 /* YKLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChart.h; sourceTree = "<group>"; };
+		203169181F03978300605D43 /* YKLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChartView.h; sourceTree = "<group>"; };
+		203169191F03978300605D43 /* YKLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineChartView.m; sourceTree = "<group>"; };
+		2031691A1F03978300605D43 /* YKLineChartViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChartViewBase.h; sourceTree = "<group>"; };
+		2031691B1F03978300605D43 /* YKLineChartViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineChartViewBase.m; sourceTree = "<group>"; };
+		2031691C1F03978300605D43 /* YKLineDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineDataSet.h; sourceTree = "<group>"; };
+		2031691D1F03978300605D43 /* YKLineDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineDataSet.m; sourceTree = "<group>"; };
+		2031691E1F03978300605D43 /* YKLineEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineEntity.h; sourceTree = "<group>"; };
+		2031691F1F03978300605D43 /* YKLineEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineEntity.m; sourceTree = "<group>"; };
+		203169201F03978300605D43 /* YKTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTimeLineView.h; sourceTree = "<group>"; };
+		203169211F03978300605D43 /* YKTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTimeLineView.m; sourceTree = "<group>"; };
+		203169221F03978300605D43 /* YKViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKViewBase.h; sourceTree = "<group>"; };
+		203169231F03978300605D43 /* YKViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKViewBase.m; sourceTree = "<group>"; };
+		2031692B1F03A23C00605D43 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
+		2031692C1F03A23C00605D43 /* FTPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPopOverMenu.m; sourceTree = "<group>"; };
+		206BC87C1F01068100574DF8 /* baseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseViewController.h; sourceTree = "<group>"; };
+		206BC87D1F01068100574DF8 /* baseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseViewController.m; sourceTree = "<group>"; };
+		206BC87F1F01069500574DF8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		206BC8801F01069500574DF8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		206BC8821F0106AA00574DF8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		206BC8831F0106AA00574DF8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		206BC8851F0106C400574DF8 /* CoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinViewController.h; sourceTree = "<group>"; };
+		206BC8861F0106C400574DF8 /* CoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinViewController.m; sourceTree = "<group>"; };
+		206BC8881F0106D300574DF8 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		206BC8891F0106D300574DF8 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		206BC88D1F0114E600574DF8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		206BC88F1F02045E00574DF8 /* NetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTools.h; sourceTree = "<group>"; };
+		206BC8901F02045E00574DF8 /* NetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkTools.m; sourceTree = "<group>"; };
+		206BC8921F0207C000574DF8 /* Kdefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kdefine.h; sourceTree = "<group>"; };
+		206BC8931F02275500574DF8 /* buysaleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buysaleModel.h; sourceTree = "<group>"; };
+		206BC8941F02275500574DF8 /* buysaleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buysaleModel.m; sourceTree = "<group>"; };
+		206BC8961F022CC100574DF8 /* buysaleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "buy\U0010sa\U0010leTableViewCell.h"; sourceTree = "<group>"; };
+		206BC8971F022CC100574DF8 /* buysaleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "buy\U0010sa\U0010leTableViewCell.m"; sourceTree = "<group>"; };
+		206BC89A1F02498700574DF8 /* dealdoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dealdoneTableViewCell.h; sourceTree = "<group>"; };
+		206BC89B1F02498700574DF8 /* dealdoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dealdoneTableViewCell.m; sourceTree = "<group>"; };
+		206BC89D1F024CFD00574DF8 /* dealDoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dealDoneModel.h; sourceTree = "<group>"; };
+		206BC89E1F024CFD00574DF8 /* dealDoneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dealDoneModel.m; sourceTree = "<group>"; };
+		207FC4731F00FC96000123A6 /* MyLtcCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLtcCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		207FC4771F00FC96000123A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		207FC4791F00FC96000123A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		207FC47A1F00FC96000123A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		207FC47C1F00FC96000123A6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		207FC47D1F00FC96000123A6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		207FC4801F00FC96000123A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		207FC4821F00FC97000123A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		207FC4851F00FC97000123A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		207FC4871F00FC97000123A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207FC48C1F00FC97000123A6 /* MyLtcCoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLtcCoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207FC4901F00FC97000123A6 /* MyLtcCoinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLtcCoinTests.m; sourceTree = "<group>"; };
+		207FC4921F00FC97000123A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207FC4971F00FC97000123A6 /* MyLtcCoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLtcCoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207FC49B1F00FC97000123A6 /* MyLtcCoinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLtcCoinUITests.m; sourceTree = "<group>"; };
+		207FC49D1F00FC97000123A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A54AE111BDF51B266D5F336 /* libPods-MyLtcCoin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLtcCoin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8091D4FF48D275D0121AECDD /* Pods-MyLtcCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLtcCoin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLtcCoin/Pods-MyLtcCoin.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		207FC4701F00FC96000123A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D3B34AF0F633CD4516CC2E6 /* libPods-MyLtcCoin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207FC4891F00FC97000123A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207FC4941F00FC97000123A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		203169161F03978300605D43 /* YKlineChartView */ = {
+			isa = PBXGroup;
+			children = (
+				203169171F03978300605D43 /* YKLineChart.h */,
+				203169181F03978300605D43 /* YKLineChartView.h */,
+				203169191F03978300605D43 /* YKLineChartView.m */,
+				2031691A1F03978300605D43 /* YKLineChartViewBase.h */,
+				2031691B1F03978300605D43 /* YKLineChartViewBase.m */,
+				2031691C1F03978300605D43 /* YKLineDataSet.h */,
+				2031691D1F03978300605D43 /* YKLineDataSet.m */,
+				2031691E1F03978300605D43 /* YKLineEntity.h */,
+				2031691F1F03978300605D43 /* YKLineEntity.m */,
+				203169201F03978300605D43 /* YKTimeLineView.h */,
+				203169211F03978300605D43 /* YKTimeLineView.m */,
+				203169221F03978300605D43 /* YKViewBase.h */,
+				203169231F03978300605D43 /* YKViewBase.m */,
+			);
+			path = YKlineChartView;
+			sourceTree = "<group>";
+		};
+		2031692A1F03A23C00605D43 /* FTPopOverMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2031692B1F03A23C00605D43 /* FTPopOverMenu.h */,
+				2031692C1F03A23C00605D43 /* FTPopOverMenu.m */,
+			);
+			path = FTPopOverMenu;
+			sourceTree = "<group>";
+		};
+		206BC88B1F01129400574DF8 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				2031692A1F03A23C00605D43 /* FTPopOverMenu */,
+				203169161F03978300605D43 /* YKlineChartView */,
+				206BC87F1F01069500574DF8 /* HomeViewController.h */,
+				206BC8801F01069500574DF8 /* HomeViewController.m */,
+				206BC88E1F01FFD400574DF8 /* SaleBuy */,
+				206BC8991F02496000574DF8 /* DealDone */,
+				206BC8881F0106D300574DF8 /* MeViewController.h */,
+				206BC8891F0106D300574DF8 /* MeViewController.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		206BC88C1F0112A100574DF8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				206BC87C1F01068100574DF8 /* baseViewController.h */,
+				206BC87D1F01068100574DF8 /* baseViewController.m */,
+				206BC88F1F02045E00574DF8 /* NetWorkTools.h */,
+				206BC8901F02045E00574DF8 /* NetWorkTools.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		206BC88E1F01FFD400574DF8 /* SaleBuy */ = {
+			isa = PBXGroup;
+			children = (
+				206BC8821F0106AA00574DF8 /* NewsViewController.h */,
+				206BC8831F0106AA00574DF8 /* NewsViewController.m */,
+				206BC8931F02275500574DF8 /* buysaleModel.h */,
+				206BC8941F02275500574DF8 /* buysaleModel.m */,
+				206BC8961F022CC100574DF8 /* buysaleTableViewCell.h */,
+				206BC8971F022CC100574DF8 /* buysaleTableViewCell.m */,
+			);
+			name = SaleBuy;
+			sourceTree = "<group>";
+		};
+		206BC8991F02496000574DF8 /* DealDone */ = {
+			isa = PBXGroup;
+			children = (
+				206BC8851F0106C400574DF8 /* CoinViewController.h */,
+				206BC8861F0106C400574DF8 /* CoinViewController.m */,
+				206BC89A1F02498700574DF8 /* dealdoneTableViewCell.h */,
+				206BC89B1F02498700574DF8 /* dealdoneTableViewCell.m */,
+				206BC89D1F024CFD00574DF8 /* dealDoneModel.h */,
+				206BC89E1F024CFD00574DF8 /* dealDoneModel.m */,
+			);
+			name = DealDone;
+			sourceTree = "<group>";
+		};
+		207FC46A1F00FC96000123A6 = {
+			isa = PBXGroup;
+			children = (
+				207FC4751F00FC96000123A6 /* MyLtcCoin */,
+				207FC48F1F00FC97000123A6 /* MyLtcCoinTests */,
+				207FC49A1F00FC97000123A6 /* MyLtcCoinUITests */,
+				207FC4741F00FC96000123A6 /* Products */,
+				2B4AEC83C799C20FEB3F80A4 /* Pods */,
+				545DC160F50D4045B6E01616 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		207FC4741F00FC96000123A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				207FC4731F00FC96000123A6 /* MyLtcCoin.app */,
+				207FC48C1F00FC97000123A6 /* MyLtcCoinTests.xctest */,
+				207FC4971F00FC97000123A6 /* MyLtcCoinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		207FC4751F00FC96000123A6 /* MyLtcCoin */ = {
+			isa = PBXGroup;
+			children = (
+				207FC4791F00FC96000123A6 /* AppDelegate.h */,
+				207FC47A1F00FC96000123A6 /* AppDelegate.m */,
+				207FC47C1F00FC96000123A6 /* ViewController.h */,
+				207FC47D1F00FC96000123A6 /* ViewController.m */,
+				206BC88C1F0112A100574DF8 /* Base */,
+				206BC88B1F01129400574DF8 /* Class */,
+				207FC47F1F00FC96000123A6 /* Main.storyboard */,
+				207FC4821F00FC97000123A6 /* Assets.xcassets */,
+				207FC4841F00FC97000123A6 /* LaunchScreen.storyboard */,
+				207FC4871F00FC97000123A6 /* Info.plist */,
+				207FC4761F00FC96000123A6 /* Supporting Files */,
+			);
+			path = MyLtcCoin;
+			sourceTree = "<group>";
+		};
+		207FC4761F00FC96000123A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				207FC4771F00FC96000123A6 /* main.m */,
+				206BC88D1F0114E600574DF8 /* PrefixHeader.pch */,
+				206BC8921F0207C000574DF8 /* Kdefine.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		207FC48F1F00FC97000123A6 /* MyLtcCoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				207FC4901F00FC97000123A6 /* MyLtcCoinTests.m */,
+				207FC4921F00FC97000123A6 /* Info.plist */,
+			);
+			path = MyLtcCoinTests;
+			sourceTree = "<group>";
+		};
+		207FC49A1F00FC97000123A6 /* MyLtcCoinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				207FC49B1F00FC97000123A6 /* MyLtcCoinUITests.m */,
+				207FC49D1F00FC97000123A6 /* Info.plist */,
+			);
+			path = MyLtcCoinUITests;
+			sourceTree = "<group>";
+		};
+		2B4AEC83C799C20FEB3F80A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8091D4FF48D275D0121AECDD /* Pods-MyLtcCoin.debug.xcconfig */,
+				0C9F2367CFA54F5A38562DDC /* Pods-MyLtcCoin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		545DC160F50D4045B6E01616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A54AE111BDF51B266D5F336 /* libPods-MyLtcCoin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		207FC4721F00FC96000123A6 /* MyLtcCoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207FC4A01F00FC97000123A6 /* Build configuration list for PBXNativeTarget "MyLtcCoin" */;
+			buildPhases = (
+				5119D6ED9BA1C5D2F45E6FDB /* [CP] Check Pods Manifest.lock */,
+				207FC46F1F00FC96000123A6 /* Sources */,
+				207FC4701F00FC96000123A6 /* Frameworks */,
+				207FC4711F00FC96000123A6 /* Resources */,
+				9E31141AA99DD5D2F8642472 /* [CP] Embed Pods Frameworks */,
+				BA630B42CEC103D3EA1F6029 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyLtcCoin;
+			productName = MyLtcCoin;
+			productReference = 207FC4731F00FC96000123A6 /* MyLtcCoin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		207FC48B1F00FC97000123A6 /* MyLtcCoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207FC4A31F00FC97000123A6 /* Build configuration list for PBXNativeTarget "MyLtcCoinTests" */;
+			buildPhases = (
+				207FC4881F00FC97000123A6 /* Sources */,
+				207FC4891F00FC97000123A6 /* Frameworks */,
+				207FC48A1F00FC97000123A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207FC48E1F00FC97000123A6 /* PBXTargetDependency */,
+			);
+			name = MyLtcCoinTests;
+			productName = MyLtcCoinTests;
+			productReference = 207FC48C1F00FC97000123A6 /* MyLtcCoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		207FC4961F00FC97000123A6 /* MyLtcCoinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207FC4A61F00FC97000123A6 /* Build configuration list for PBXNativeTarget "MyLtcCoinUITests" */;
+			buildPhases = (
+				207FC4931F00FC97000123A6 /* Sources */,
+				207FC4941F00FC97000123A6 /* Frameworks */,
+				207FC4951F00FC97000123A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207FC4991F00FC97000123A6 /* PBXTargetDependency */,
+			);
+			name = MyLtcCoinUITests;
+			productName = MyLtcCoinUITests;
+			productReference = 207FC4971F00FC97000123A6 /* MyLtcCoinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		207FC46B1F00FC96000123A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = hechuan;
+				TargetAttributes = {
+					207FC4721F00FC96000123A6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Q8AANZW9MY;
+						ProvisioningStyle = Manual;
+					};
+					207FC48B1F00FC97000123A6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 207FC4721F00FC96000123A6;
+					};
+					207FC4961F00FC97000123A6 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 207FC4721F00FC96000123A6;
+					};
+				};
+			};
+			buildConfigurationList = 207FC46E1F00FC96000123A6 /* Build configuration list for PBXProject "MyLtcCoin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 207FC46A1F00FC96000123A6;
+			productRefGroup = 207FC4741F00FC96000123A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				207FC4721F00FC96000123A6 /* MyLtcCoin */,
+				207FC48B1F00FC97000123A6 /* MyLtcCoinTests */,
+				207FC4961F00FC97000123A6 /* MyLtcCoinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		207FC4711F00FC96000123A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207FC4861F00FC97000123A6 /* LaunchScreen.storyboard in Resources */,
+				207FC4831F00FC97000123A6 /* Assets.xcassets in Resources */,
+				207FC4811F00FC96000123A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207FC48A1F00FC97000123A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207FC4951F00FC97000123A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5119D6ED9BA1C5D2F45E6FDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E31141AA99DD5D2F8642472 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyLtcCoin/Pods-MyLtcCoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA630B42CEC103D3EA1F6029 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyLtcCoin/Pods-MyLtcCoin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		207FC46F1F00FC96000123A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206BC8871F0106C400574DF8 /* CoinViewController.m in Sources */,
+				206BC8981F022CC100574DF8 /* buysaleTableViewCell.m in Sources */,
+				207FC47E1F00FC96000123A6 /* ViewController.m in Sources */,
+				203169281F03978300605D43 /* YKTimeLineView.m in Sources */,
+				2031692D1F03A23C00605D43 /* FTPopOverMenu.m in Sources */,
+				203169271F03978300605D43 /* YKLineEntity.m in Sources */,
+				206BC87E1F01068100574DF8 /* baseViewController.m in Sources */,
+				207FC47B1F00FC96000123A6 /* AppDelegate.m in Sources */,
+				206BC8841F0106AA00574DF8 /* NewsViewController.m in Sources */,
+				206BC8911F02045E00574DF8 /* NetWorkTools.m in Sources */,
+				203169241F03978300605D43 /* YKLineChartView.m in Sources */,
+				206BC8811F01069500574DF8 /* HomeViewController.m in Sources */,
+				206BC89F1F024CFD00574DF8 /* dealDoneModel.m in Sources */,
+				203169251F03978300605D43 /* YKLineChartViewBase.m in Sources */,
+				206BC8951F02275500574DF8 /* buysaleModel.m in Sources */,
+				203169291F03978300605D43 /* YKViewBase.m in Sources */,
+				203169261F03978300605D43 /* YKLineDataSet.m in Sources */,
+				206BC89C1F02498700574DF8 /* dealdoneTableViewCell.m in Sources */,
+				206BC88A1F0106D300574DF8 /* MeViewController.m in Sources */,
+				207FC4781F00FC96000123A6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207FC4881F00FC97000123A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207FC4911F00FC97000123A6 /* MyLtcCoinTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207FC4931F00FC97000123A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207FC49C1F00FC97000123A6 /* MyLtcCoinUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		207FC48E1F00FC97000123A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207FC4721F00FC96000123A6 /* MyLtcCoin */;
+			targetProxy = 207FC48D1F00FC97000123A6 /* PBXContainerItemProxy */;
+		};
+		207FC4991F00FC97000123A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207FC4721F00FC96000123A6 /* MyLtcCoin */;
+			targetProxy = 207FC4981F00FC97000123A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		207FC47F1F00FC96000123A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207FC4801F00FC96000123A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		207FC4841F00FC97000123A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207FC4851F00FC97000123A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		207FC49E1F00FC97000123A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		207FC49F1F00FC97000123A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		207FC4A11F00FC97000123A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8091D4FF48D275D0121AECDD /* Pods-MyLtcCoin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q8AANZW9MY;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyLtcCoin/PrefixHeader.pch";
+				INFOPLIST_FILE = MyLtcCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "348eb2e6-07d6-4d1a-bb4b-79d02b7e3435";
+				PROVISIONING_PROFILE_SPECIFIER = "com.weejinfu.iostest.*";
+			};
+			name = Debug;
+		};
+		207FC4A21F00FC97000123A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C9F2367CFA54F5A38562DDC /* Pods-MyLtcCoin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q8AANZW9MY;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyLtcCoin/PrefixHeader.pch";
+				INFOPLIST_FILE = MyLtcCoin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "348eb2e6-07d6-4d1a-bb4b-79d02b7e3435";
+				PROVISIONING_PROFILE_SPECIFIER = "com.weejinfu.iostest.*";
+			};
+			name = Release;
+		};
+		207FC4A41F00FC97000123A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyLtcCoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLtcCoin.app/MyLtcCoin";
+			};
+			name = Debug;
+		};
+		207FC4A51F00FC97000123A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyLtcCoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLtcCoin.app/MyLtcCoin";
+			};
+			name = Release;
+		};
+		207FC4A71F00FC97000123A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyLtcCoinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyLtcCoin;
+			};
+			name = Debug;
+		};
+		207FC4A81F00FC97000123A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyLtcCoinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyLtcCoin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		207FC46E1F00FC96000123A6 /* Build configuration list for PBXProject "MyLtcCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207FC49E1F00FC97000123A6 /* Debug */,
+				207FC49F1F00FC97000123A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207FC4A01F00FC97000123A6 /* Build configuration list for PBXNativeTarget "MyLtcCoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207FC4A11F00FC97000123A6 /* Debug */,
+				207FC4A21F00FC97000123A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207FC4A31F00FC97000123A6 /* Build configuration list for PBXNativeTarget "MyLtcCoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207FC4A41F00FC97000123A6 /* Debug */,
+				207FC4A51F00FC97000123A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207FC4A61F00FC97000123A6 /* Build configuration list for PBXNativeTarget "MyLtcCoinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207FC4A71F00FC97000123A6 /* Debug */,
+				207FC4A81F00FC97000123A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 207FC46B1F00FC96000123A6 /* Project object */;
+}

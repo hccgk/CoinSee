@@ -1,0 +1,51 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CYLTabBarController (1.13.1)
+  - JKCategories (1.5)
+  - JSONModel (1.7.0)
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
+  - RTRootNavigationController (0.5.26):
+    - RTRootNavigationController/Core (= 0.5.26)
+  - RTRootNavigationController/Core (0.5.26)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CYLTabBarController
+  - JKCategories
+  - JSONModel
+  - Masonry
+  - MJRefresh
+  - RTRootNavigationController
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CYLTabBarController: 97f6b486f9e6c613d69e9c111cc9c2c5db7000ce
+  JKCategories: 863f4c7ed2d521ee6bf72ceea97948da23bb5af4
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  RTRootNavigationController: 153e538439fa20faec706019b04375f6c6fabeb6
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+
+PODFILE CHECKSUM: 72ad335b27647e5efc41d6f6bde24b6d5d467a85
+
+COCOAPODS: 1.2.0
