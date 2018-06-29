@@ -10,5 +10,9 @@
 
 @implementation dealDoneModel
 
-
++(JSONKeyMapper *)keyMapper{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"date":@"ts",@"tid":@"id",
+                                                                  @"type":@"side"
+                                                                  }];
+}
 @end

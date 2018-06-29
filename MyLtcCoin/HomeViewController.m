@@ -10,6 +10,7 @@
 #import  "YKLineChart.h"
 #import "FTPopOverMenu.h"
 
+
 @interface HomeViewController ()
 @property(nonatomic,strong)NSArray *CoinType;
 @property(nonatomic,copy)NSMutableArray *kLineArr;
@@ -24,16 +25,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _CoinType = @[@"比特币",@"莱特币",@"以太坊"];
+    _CoinType = @[@"BTC/USDT",@"FT/USDT",@"LTC/USDT"];
     self.title = @"首页";
-    _timesel = @"12hour";
-    _timeselArray = @[@"1min",@"3min",@"5min",@"15min",@"30min",@"1hour",@"2hour",@"4hour",@"6hour",@"12hour",@"1day",@"3day",@"1week"];
-    _timeselShowArray = @[@"1分钟", @"3分钟", @"5分钟", @"15分钟",@"30分钟", @"1小时", @"2小时", @"4小时",@"6小时", @"12小时",@"1日",@"3日",@"1周"];
+    _timesel = @"H1";
+    _timeselArray = @[@"M1",@"M3",@"M5",@"M15",@"M30",@"H1",@"H4",@"H6",@"D1",@"W1",@"MN"];
+    _timeselShowArray = @[@"1分钟", @"3分钟", @"5分钟", @"15分钟",@"30分钟", @"1小时", @"4小时",@"6小时",@"1日",@"1周",@"1月"];
     [self makeUI];
 }
 -(YKLineChartView *)klineView{
     if (!_klineView) {
-        _klineView = [[YKLineChartView alloc] initWithFrame:CGRectMake(0, 64, kScreenW , kScreenH - 64-140)];
+        _klineView = [[YKLineChartView alloc] initWithFrame:CGRectMake(0, kNavH + 10, kScreenW , kScreenH - kNavH - kTabbarHeight - 60 - 10)];
     }
     return _klineView;
 }
@@ -50,7 +51,7 @@
  
     [FTPopOverMenu showForSender:btn
                    withMenuArray:_timeselShowArray
-                      imageArray:@[@"Pokemon_Go_04", @"Pokemon_Go_04", @"Pokemon_Go_04", @"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04"]
+                      imageArray:@[@"Pokemon_Go_04", @"Pokemon_Go_04", @"Pokemon_Go_04", @"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04",@"Pokemon_Go_04"]
                        doneBlock:^(NSInteger selectedIndex) {
                            _timesel =  _timeselArray[selectedIndex];
                            [_timeSelbtn setTitle:_timeselShowArray[selectedIndex] forState:UIControlStateNormal];
@@ -62,15 +63,16 @@
 -(void)makeUI{
     
     _timeSelbtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 30)];
-    [_timeSelbtn setTitle:@"12小时" forState:UIControlStateNormal];
+    [_timeSelbtn setTitle:@"1小时" forState:UIControlStateNormal];
     [_timeSelbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _timeSelbtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [_timeSelbtn addTarget:self action:@selector(selTime:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_timeSelbtn];
     
+    
     UIView *buttonview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 270, 35)];
-    buttonview.jk_bottom = self.view.jk_bottom - 60;
+    buttonview.jk_bottom = self.view.jk_bottom - kTabbarHeight - 20;
     buttonview.jk_centerX = self.view.jk_centerX;
     [self.view addSubview:buttonview];
     
@@ -81,8 +83,10 @@
         [makeDatabutton setTitle:_CoinType[i] forState:UIControlStateNormal];
         [makeDatabutton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [makeDatabutton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        makeDatabutton.titleLabel.font = [UIFont systemFontOfSize:13];
         makeDatabutton.layer.cornerRadius = 4.0;
         makeDatabutton.layer.masksToBounds = YES;
+        
         makeDatabutton.layer.borderColor = [UIColor blackColor].CGColor;
         makeDatabutton.layer.borderWidth = 1.0;
         [makeDatabutton addTarget:self action:@selector(ShowWhatCoin:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,13 +106,13 @@
     
     switch (btn.tag - 1000) {
         case 0:
-            [NetWorkTools shareTools].coinType = kBtc;
+            [NetWorkTools shareTools].coinType = kFtBtc;
             break;
         case 1:
-            [NetWorkTools shareTools].coinType = kLtc;
+            [NetWorkTools shareTools].coinType = kFtUsdt;
             break;
         case 2:
-            [NetWorkTools shareTools].coinType = kEth;
+            [NetWorkTools shareTools].coinType = kFtEth;
             break;
         default:
             break;
@@ -119,31 +123,32 @@
 }
 
 -(void)makeData{
-    NSString *coinType = [NetWorkTools shareTools].coinType;
-    [[NetWorkTools shareTools] GET:kKline parameters:@{@"symbol":coinType,@"type":_timesel} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSArray *getklineArray = responseObject;
+//    NSString *coinType = [NetWorkTools shareTools].coinType; //@{@"limit":@"300"}
+    NSString *urlstring = [NSString stringWithFormat:@"%@/%@/%@",kKline,_timesel, [NetWorkTools shareTools].coinType];
+    [[NetWorkTools shareTools] GET: urlstring parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray *getklineArray = responseObject[@"data"];
         _kLineArr = [NSMutableArray array];
-        for (int i = 0; i<getklineArray.count; i++) {
-            NSArray *getItemarr = getklineArray[i];
+        for (int i = getklineArray.count - 1; i>=0; i--) {
+            NSDictionary *getItemarr = getklineArray[i];
             YKLineEntity * entity = [[YKLineEntity alloc]init];
 
-            entity.high = [getItemarr[2] floatValue];
-            entity.open = [getItemarr[1] floatValue];
+            entity.high = [getItemarr[@"high"] floatValue];
+            entity.open = [getItemarr[@"open"] floatValue];
             
-            entity.low = [getItemarr[3] floatValue];
+            entity.low = [getItemarr[@"low"] floatValue];
             
-            entity.close = [getItemarr[4] floatValue];
+            entity.close = [getItemarr[@"close"] floatValue];
             
-            NSDate *date =[NSDate dateWithTimeIntervalSince1970:[getItemarr[0] floatValue]/1000];
+            NSDate *date =[NSDate dateWithTimeIntervalSince1970:[getItemarr[@"id"] floatValue]];
              entity.date = [date jk_stringWithFormat:@"yyyy/MM/dd"];
 
-            entity.volume = [getItemarr[5] floatValue];
+            entity.volume = [getItemarr[@"base_vol"] floatValue];
             [_kLineArr addObject:entity];
         }
         [_kLineArr addObjectsFromArray:_kLineArr];
         [self makeKline];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
+        NSLog(@"");
     }];
 
 }

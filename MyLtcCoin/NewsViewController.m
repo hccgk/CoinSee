@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"买卖200档";
+    self.title = @"买卖全档";
     [self makeData];
     
   
@@ -69,28 +69,30 @@
     [self.tableview.mj_header endRefreshing];
 }
 -(void)makeData{
-    NSString *coinType = [NetWorkTools shareTools].coinType;
-    [[NetWorkTools shareTools] GET:kDepth parameters:@{@"symbol":coinType} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//    NSString *coinType = [NetWorkTools shareTools].coinType;
+    NSString *urlstring = [NSString stringWithFormat:@"%@full/%@",kDepth, [NetWorkTools shareTools].coinType];
+
+    [[NetWorkTools shareTools] GET:urlstring parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         _buyArray = nil;
         _saleArray = nil;
-        NSArray *getsalArray = [[NSArray arrayWithObject:responseObject[@"asks"]] firstObject];
+        NSArray *getsalArray = [[NSArray arrayWithObject:responseObject[@"data"][@"asks"]] firstObject] ;
         NSMutableArray *mutarray = [NSMutableArray array];
         for (int i = 0; i<getsalArray.count; i++) {
             buysaleModel *model = [[buysaleModel alloc] init];
-            model.price = [getsalArray[getsalArray.count - i - 1] firstObject];
-            model.number = [getsalArray[getsalArray.count - i - 1] lastObject];
-            model.pId = [NSString stringWithFormat:@"卖%d",i+1];
+            model.price = getsalArray[i];
+            model.number = getsalArray[++i];
+            model.pId = [NSString stringWithFormat:@"卖%d",i/2+1];
             [mutarray addObject:model];
         }
         _buyArray = mutarray;
         
-        NSArray *getbuyArray = [[NSArray arrayWithObject:responseObject[@"bids"]] firstObject];
+        NSArray *getbuyArray = [[NSArray arrayWithObject:responseObject[@"data"][@"bids"]] firstObject];
         NSMutableArray *mutbuyArr = [NSMutableArray array];
         for (int i =0 ; i<getbuyArray.count; i++) {
             buysaleModel *model = [[buysaleModel alloc] init];
-            model.price = [getbuyArray[i] firstObject];
-            model.number = [getbuyArray[i] lastObject];
-            model.pId = [NSString stringWithFormat:@"买%d",i+1];
+            model.price = getbuyArray[i];
+            model.number = getbuyArray[++i];
+            model.pId = [NSString stringWithFormat:@"买%d",i/2+1];
             [mutbuyArr addObject:model];
         }
         _saleArray = mutbuyArr;
@@ -104,39 +106,40 @@
 }
 
 -(void)reloadData{
-    NSString *coinType = [NetWorkTools shareTools].coinType;
 
-    [[NetWorkTools shareTools] GET:kDepth parameters:@{@"symbol":coinType} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSString *urlstring = [NSString stringWithFormat:@"%@full/%@",kDepth, [NetWorkTools shareTools].coinType];
+    
+    [[NetWorkTools shareTools] GET:urlstring parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         _buyArray = nil;
         _saleArray = nil;
-        NSArray *getsalArray = [[NSArray arrayWithObject:responseObject[@"asks"]] firstObject];
+        NSArray *getsalArray = [[NSArray arrayWithObject:responseObject[@"data"][@"asks"]] firstObject] ;
         NSMutableArray *mutarray = [NSMutableArray array];
         for (int i = 0; i<getsalArray.count; i++) {
             buysaleModel *model = [[buysaleModel alloc] init];
-            model.price = [getsalArray[getsalArray.count - i - 1] firstObject];
-            model.number = [getsalArray[getsalArray.count - i - 1] lastObject];
-            model.pId = [NSString stringWithFormat:@"卖%d",i+1];
+            model.price = getsalArray[i];
+            model.number = getsalArray[++i];
+            model.pId = [NSString stringWithFormat:@"卖%d",i/2+1];
             [mutarray addObject:model];
         }
         _buyArray = mutarray;
         
-        NSArray *getbuyArray = [[NSArray arrayWithObject:responseObject[@"bids"]] firstObject];
+        NSArray *getbuyArray = [[NSArray arrayWithObject:responseObject[@"data"][@"bids"]] firstObject];
         NSMutableArray *mutbuyArr = [NSMutableArray array];
         for (int i =0 ; i<getbuyArray.count; i++) {
             buysaleModel *model = [[buysaleModel alloc] init];
-            model.price = [getbuyArray[i] firstObject];
-            model.number = [getbuyArray[i] lastObject];
-            model.pId = [NSString stringWithFormat:@"买%d",i+1];
+            model.price = getbuyArray[i];
+            model.number = getbuyArray[++i];
+            model.pId = [NSString stringWithFormat:@"买%d",i/2+1];
             [mutbuyArr addObject:model];
         }
         _saleArray = mutbuyArr;
-        
         [self.tableview reloadData];
         [self.tableview.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableview.mj_header endRefreshing];
         
     }];
+    
     
  
 }

@@ -24,7 +24,7 @@
     if (self) {
         
         self =  [[NetWorkTools manager] initWithBaseURL:[NSURL URLWithString:kBaseUrl]];
-        self.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     }
     return self;
 }

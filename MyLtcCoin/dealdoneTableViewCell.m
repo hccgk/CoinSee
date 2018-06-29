@@ -54,7 +54,7 @@
  */
 -(void)setDdmodle:(dealDoneModel *)ddmodle{
     
-    NSDate *date =[NSDate dateWithTimeIntervalSince1970:ddmodle.date.doubleValue];
+    NSDate *date =[NSDate dateWithTimeIntervalSince1970:ddmodle.date.doubleValue/1000];
     _timeLable.text = [date jk_stringWithFormat:[NSDate jk_hmsFormat]];
     if ([ddmodle.type isEqualToString:@"sell"]) {
         _monyLable.textColor = [UIColor greenColor];
@@ -65,8 +65,8 @@
         _amountLable.textColor = [UIColor redColor];
     }
     
-    _monyLable.text = [NSString stringWithFormat:@"%.2f",ddmodle.price.doubleValue];
-    _amountLable.text = [NSString stringWithFormat:@"%.2f",ddmodle.amount.doubleValue];
+    _monyLable.text = [NSString stringWithFormat:@"%.6f",ddmodle.price.doubleValue];
+    _amountLable.text = [NSString stringWithFormat:@"%.6f",ddmodle.amount.doubleValue];
     
 }
 

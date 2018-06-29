@@ -24,13 +24,14 @@
 }
 
 -(void)makeData{
-    NSString *coinType = [NetWorkTools shareTools].coinType;
+//    NSString *coinType = [NetWorkTools shareTools].coinType;
+    NSString *urlstring = [NSString stringWithFormat:@"%@%@",kTrades, [NetWorkTools shareTools].coinType];
 
-    [[NetWorkTools shareTools] GET:kTrades parameters:@{@"symbol":coinType} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSArray *getarr = responseObject;
+    [[NetWorkTools shareTools] GET:urlstring parameters:@{@"limit":@(200)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray *getarr = responseObject[@"data"];
         NSMutableArray *tempmutarr = [NSMutableArray array];
         for (int i = 0 ; i<getarr.count; i++) {
-            dealDoneModel *model = [[dealDoneModel alloc] initWithDictionary:getarr[getarr.count - i -1] error:nil];
+            dealDoneModel *model = [[dealDoneModel alloc] initWithDictionary:getarr[i] error:nil];
             [tempmutarr addObject:model];
         }
         _modelArr = tempmutarr;
@@ -42,22 +43,22 @@
     }];
 }
 -(void)reloadData{
-    NSString *coinType = [NetWorkTools shareTools].coinType;
-    [[NetWorkTools shareTools] GET:kTrades parameters:@{@"symbol":coinType} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        _modelArr = nil;
-        NSArray *getarr = responseObject;
+    NSString *urlstring = [NSString stringWithFormat:@"%@%@",kTrades, [NetWorkTools shareTools].coinType];
+  
+    
+    [[NetWorkTools shareTools] GET:urlstring parameters:@{@"limit":@(200)} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSArray *getarr = responseObject[@"data"];
         NSMutableArray *tempmutarr = [NSMutableArray array];
         for (int i = 0 ; i<getarr.count; i++) {
-            dealDoneModel *model = [[dealDoneModel alloc] initWithDictionary:getarr[getarr.count - i -1] error:nil];
+            dealDoneModel *model = [[dealDoneModel alloc] initWithDictionary:getarr[i] error:nil];
             [tempmutarr addObject:model];
         }
         _modelArr = tempmutarr;
         [self.tableview reloadData];
         [self.tableview.mj_header endRefreshing];
-
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableview.mj_header endRefreshing];
-
+        
     }];
 
 }
@@ -71,7 +72,7 @@
 
 -(UITableView*)tableview{
     if(!_tableview){
-        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenW, kScreenH - 64 - 50) style:UITableViewStylePlain];
+        _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavH, kScreenW, kScreenH - 64 - 50) style:UITableViewStylePlain];
         _tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     }
     return _tableview;

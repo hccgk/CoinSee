@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EAFA32820E5CED2008627EB /* buysaleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFA32720E5CED2008627EB /* buysaleTableViewCell.m */; };
 		203169241F03978300605D43 /* YKLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203169191F03978300605D43 /* YKLineChartView.m */; };
 		203169251F03978300605D43 /* YKLineChartViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031691B1F03978300605D43 /* YKLineChartViewBase.m */; };
 		203169261F03978300605D43 /* YKLineDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2031691D1F03978300605D43 /* YKLineDataSet.m */; };
@@ -21,7 +22,6 @@
 		206BC88A1F0106D300574DF8 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8891F0106D300574DF8 /* MeViewController.m */; };
 		206BC8911F02045E00574DF8 /* NetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8901F02045E00574DF8 /* NetWorkTools.m */; };
 		206BC8951F02275500574DF8 /* buysaleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8941F02275500574DF8 /* buysaleModel.m */; };
-		206BC8981F022CC100574DF8 /* buysaleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC8971F022CC100574DF8 /* buysaleTableViewCell.m */; };
 		206BC89C1F02498700574DF8 /* dealdoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC89B1F02498700574DF8 /* dealdoneTableViewCell.m */; };
 		206BC89F1F024CFD00574DF8 /* dealDoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 206BC89E1F024CFD00574DF8 /* dealDoneModel.m */; };
 		207FC4781F00FC96000123A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 207FC4771F00FC96000123A6 /* main.m */; };
@@ -54,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		0C9F2367CFA54F5A38562DDC /* Pods-MyLtcCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLtcCoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLtcCoin/Pods-MyLtcCoin.release.xcconfig"; sourceTree = "<group>"; };
+		0EAFA32620E5CED2008627EB /* buysaleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "buy\U0010sa\U0010leTableViewCell.h"; sourceTree = "<group>"; };
+		0EAFA32720E5CED2008627EB /* buysaleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "buy\U0010sa\U0010leTableViewCell.m"; sourceTree = "<group>"; };
 		203169171F03978300605D43 /* YKLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChart.h; sourceTree = "<group>"; };
 		203169181F03978300605D43 /* YKLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKLineChartView.h; sourceTree = "<group>"; };
 		203169191F03978300605D43 /* YKLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKLineChartView.m; sourceTree = "<group>"; };
@@ -85,8 +87,6 @@
 		206BC8921F0207C000574DF8 /* Kdefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kdefine.h; sourceTree = "<group>"; };
 		206BC8931F02275500574DF8 /* buysaleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buysaleModel.h; sourceTree = "<group>"; };
 		206BC8941F02275500574DF8 /* buysaleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buysaleModel.m; sourceTree = "<group>"; };
-		206BC8961F022CC100574DF8 /* buysaleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "buy\U0010sa\U0010leTableViewCell.h"; sourceTree = "<group>"; };
-		206BC8971F022CC100574DF8 /* buysaleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "buy\U0010sa\U0010leTableViewCell.m"; sourceTree = "<group>"; };
 		206BC89A1F02498700574DF8 /* dealdoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dealdoneTableViewCell.h; sourceTree = "<group>"; };
 		206BC89B1F02498700574DF8 /* dealdoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dealdoneTableViewCell.m; sourceTree = "<group>"; };
 		206BC89D1F024CFD00574DF8 /* dealDoneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dealDoneModel.h; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 				206BC8831F0106AA00574DF8 /* NewsViewController.m */,
 				206BC8931F02275500574DF8 /* buysaleModel.h */,
 				206BC8941F02275500574DF8 /* buysaleModel.m */,
-				206BC8961F022CC100574DF8 /* buysaleTableViewCell.h */,
-				206BC8971F022CC100574DF8 /* buysaleTableViewCell.m */,
+				0EAFA32620E5CED2008627EB /* buysaleTableViewCell.h */,
+				0EAFA32720E5CED2008627EB /* buysaleTableViewCell.m */,
 			);
 			name = SaleBuy;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				TargetAttributes = {
 					207FC4721F00FC96000123A6 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = Q8AANZW9MY;
+						DevelopmentTeam = 3C2Q8FTPF6;
 						ProvisioningStyle = Manual;
 					};
 					207FC48B1F00FC97000123A6 = {
@@ -489,9 +489,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				206BC8871F0106C400574DF8 /* CoinViewController.m in Sources */,
-				206BC8981F022CC100574DF8 /* buysaleTableViewCell.m in Sources */,
 				207FC47E1F00FC96000123A6 /* ViewController.m in Sources */,
 				203169281F03978300605D43 /* YKTimeLineView.m in Sources */,
+				0EAFA32820E5CED2008627EB /* buysaleTableViewCell.m in Sources */,
 				2031692D1F03A23C00605D43 /* FTPopOverMenu.m in Sources */,
 				203169271F03978300605D43 /* YKLineEntity.m in Sources */,
 				206BC87E1F01068100574DF8 /* baseViewController.m in Sources */,
@@ -657,16 +657,16 @@
 			baseConfigurationReference = 8091D4FF48D275D0121AECDD /* Pods-MyLtcCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q8AANZW9MY;
+				DEVELOPMENT_TEAM = 3C2Q8FTPF6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyLtcCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = MyLtcCoin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coinsee.fcoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "348eb2e6-07d6-4d1a-bb4b-79d02b7e3435";
-				PROVISIONING_PROFILE_SPECIFIER = "com.weejinfu.iostest.*";
+				PROVISIONING_PROFILE = "f061eba3-b2b9-4361-849c-0ec2f19a99dd";
+				PROVISIONING_PROFILE_SPECIFIER = CoinSeeDev;
 			};
 			name = Debug;
 		};
@@ -675,16 +675,16 @@
 			baseConfigurationReference = 0C9F2367CFA54F5A38562DDC /* Pods-MyLtcCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q8AANZW9MY;
+				DEVELOPMENT_TEAM = 3C2Q8FTPF6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyLtcCoin/PrefixHeader.pch";
 				INFOPLIST_FILE = MyLtcCoin/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.weejinfu.iostest.MyLtcCoin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coinsee.fcoin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "348eb2e6-07d6-4d1a-bb4b-79d02b7e3435";
-				PROVISIONING_PROFILE_SPECIFIER = "com.weejinfu.iostest.*";
+				PROVISIONING_PROFILE = "f061eba3-b2b9-4361-849c-0ec2f19a99dd";
+				PROVISIONING_PROFILE_SPECIFIER = CoinSeeDev;
 			};
 			name = Release;
 		};
